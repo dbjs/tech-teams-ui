@@ -3,11 +3,12 @@
 // passing it as a key-value pair,
 // // like in a normal object
 //
-// import { combineReducers } from 'redux';
-// import exampleReducer from './ExamplePage/exampleReducer';
-//
-// const allReducers = combineReducers({
-//   exampleReducer,
-// });
-//
-// export default allReducers;
+
+import { combineReducers } from 'redux';
+import saveNewSkillReducer from './Profile/updateTechSkill';
+
+const allReducers = combineReducers({
+  techSkills: saveNewSkillReducer,
+});
+
+export default allReducers;
