@@ -29,9 +29,10 @@ class App extends React.Component {
               <Route path="/login" component={Login}/>
               <Route path="/signup" component={Signup}/>
               <Route exact path="/" component={LandingPage}/>
+
             </Switch>
-              <Route path="/questions" component={Questions } />
-              <Route path="/username" component={MainProfile}/>
+              <Route path="/signup/questions" component={Questions } />
+              <Route path="/username/profile" component={MainProfile}/>
           </div>
         </MuiThemeProvider>
       </div>
