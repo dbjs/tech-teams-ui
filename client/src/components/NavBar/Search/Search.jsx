@@ -13,18 +13,34 @@ class Search extends React.Component {
     this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
   }
 
+  componentDidMount() {
+    // console.log('NIGGAAHHH ', this.props)
+  }
+
   handleSearchSubmit(e) {
     e.preventDefault();
 
-    console.log('CLICKED SEARCH SUBMIT', this.props);
+    // console.log('CLICKED SEARCH SUBMIT', this.props);
     let query = $("#query").val();
 
     if(query) {
-      console.log('Tryna search for=', query);
+      // console.log('Tryna search for=', query);
       axios({method: 'post', url: 'http://localhost:3000/projectsearch', data: {query: query}})
         .then(res => {
           console.log("DB RESPONSE TO SEARCH=", res);
-          // this.props.history.push('searchresults')
+          this.props.updateProjectsResults(res);
+          swal({
+            title: 'We are looking for you!',
+            showConfirmButton: false,
+            text: 'searching...',
+            timer: 1800,
+            onOpen: () => {
+              swal.showLoading()
+            }
+          }).then(() => {
+            this.props.history.push('/projectsearchresults')
+
+          })
         })
         .catch(err => {
           swal({

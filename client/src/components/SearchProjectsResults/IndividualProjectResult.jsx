@@ -11,12 +11,15 @@ class IndividualProjectResult extends React.Component {
       showDesc: this.props.element.showDesc,
     };
 
-    this.toggleDesc = this.toggleDesc.bind(this);
+    this.redirectProject = this.redirectProject.bind(this);
     this.toggleInterview = this.toggleInterview.bind(this);
   }
 
-  toggleDesc() {
-    this.setState({ showDesc: !this.state.showDesc });
+  redirectProject() {
+    // console.log('BUTTON HIT, ', this.props.updateProject);
+    // console.log('EVENT: ', this.props.element.name)
+    this.props.updateProject(this.props.element.name);
+    this.props.history.push(`/project/${this.props.element.name}`)
   }
 
   toggleInterview() {
@@ -29,18 +32,18 @@ class IndividualProjectResult extends React.Component {
         <div className="searchProject-projectImg">
           <img
             src={this.props.element.projectImage}
-            alt={this.props.element.projectName}
+            alt={this.props.element.name}
             height="100"
           />
         </div>
         <div className="searchProject-projectInfo" >
-          <span onClick={this.toggleDesc}>
-            <strong> {this.props.element.projectName} </strong>
+          <span onClick={this.redirectProject}>
+            <strong> {this.props.element.name} </strong>
           </span>
           <button className="btn-interview" onClick={this.toggleInterview}>
             {this.state.interview ? 'Interview Sent' : 'Interview'}
           </button> <br />
-          {this.state.showDesc ? this.props.element.projectDesc : null}
+          <span> {this.props.element.projectDesc} </span>
         </div>
       </div>
     );

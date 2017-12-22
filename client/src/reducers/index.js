@@ -41,6 +41,7 @@ const allReducers = combineReducers({
   currentProjects: updateCurrentProjectsReducer,
   completedProjects: updateCompletedProjectsReducer,
   projectsResults: updateSearchProjectsResultsReducer,
+  projectSearchQuery: updateSearchProjectsResultsReducer,
   usersResults: updateSearchUsersResultsReducer,
   projects: saveNewProjectsReducer,
   alerts: viewAlertsReducer,

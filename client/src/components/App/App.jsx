@@ -11,6 +11,7 @@ import MainProfile from '../../containers/Profile/ProfileContainer';
 import NavBar from '../NavBar/NavBar';
 import ProjectProfile from '../../containers/ProjectProfile/ProjectProfileContainer';
 import SearchUsersResults from '../../containers/SearchUsersResults/SearchUsersResults';
+import SearchProjectsResults from '../../containers/SearchProjectsResults/SearchProjectsResults';
 
 class App extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class App extends React.Component {
             <Route path='/username/profile' component={MainProfile} />
             <Route path="/username/project/:id" component={ProjectProfile} />
             <Route path="/usersearch" component={SearchUsersResults} />
+            <Route path="/projectsearchresults" component={SearchProjectsResults} />
           </div>
         </MuiThemeProvider>
       </div>
