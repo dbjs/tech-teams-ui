@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Button, Icon, Collapsible, CollapsibleItem} from 'react-materialize'
 import { Link, Router, Route, Redirect } from 'react-router-dom';
 import axios from 'axios';
+import './CurrentProjects.css';
 
 class CurrentProjects extends React.Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class CurrentProjects extends React.Component {
         <div id="brendan">{
           this.state.currentProjects.map((element, index) => (
             <div
+            id="current-project-individual"
             key={index}
             id="project"
             index={index}

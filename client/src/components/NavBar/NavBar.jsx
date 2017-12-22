@@ -4,7 +4,7 @@ import Projects from '../../containers/Projects/ProjectsContainer';
 import Alerts from '../../containers/Alerts/AlertsContainer';
 import CreateProject from '../NavBar/CreateProject/CreateProject';
 import CreatePosition from '../../components/CreatePosition/CreatePosition';
-import Search from '../NavBar/Search/Search';
+import Search from '../../containers/Search/Search';
 import logo from '../../../dist/images/Logomakr_5f3c6s.png';
 
 class NavBar extends React.Component {

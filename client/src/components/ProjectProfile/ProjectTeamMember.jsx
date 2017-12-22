@@ -21,8 +21,8 @@ class ProjectTeamMember extends React.Component {
 
   render() {
     return (
-      <div id="individualTeamMember-contatiner">
-        <img className="teammember" src={this.props.member.image} alt={this.props.member.name} />
+      <div>
+        <img className="teammember" src={this.props.member.imageurl} alt={this.props.member.name} />
         <span> {this.props.member.name} </span>
         {this.state.editMode ?
           <button
