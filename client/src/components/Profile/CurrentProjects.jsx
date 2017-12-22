@@ -33,20 +33,29 @@ class CurrentProjects extends React.Component {
       <div id="currentProjects-container">
         Projects <br />
         <div id="newdivider"> </div>
-        {
+        <div id="brendan">{
           this.state.currentProjects.map((element, index) => (
             <div
             key={index}
-            id={`prof-completed-${element.project}`}
+            id="project"
             index={index}
             onClick={() => this.selectProject(element)}
             >
-            {/* {console.log('CURRENT PROJECT ELEMENT', element)} */}
-              {element.project} || {element.title || 'Product Owner'} <br />
+            <div id="main">
+              <span id="image">
+                <img src={element.imageurl || "https://c1.staticflickr.com/2/1071/1106852126_b3eadf6da6.jpg"} />
+              </span>
+              <span>
+                {element.project}
+                {element.title}
+              </span>
+            </div>
+            <div id="desc">
               {element.projectdescription}
             </div>
+            </div>
           ))
-        }
+        }</div>
       </div>
     );
   }

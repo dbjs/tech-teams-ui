@@ -1,8 +1,46 @@
+html {
+  BACKGROUND: BLACK;
+}
+
 #profilePage-container {
 background: black;
 position:absolute;
 height:100%;
 width:100%;
+}
+
+#project {
+  text-align: left;
+  padding-left: 4px;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+#brendan {
+  margin-left: 270px;
+}
+
+#main {
+  margin-bottom: 1px;
+  font-weight: bold;
+  padding-left: 3px;
+}
+
+#image {
+  margin-right: 10px;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 1px;
+}
+
+#desc {
+  font-style: italic;
+  margin-bottom: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
 }
 
 #profilePage-background{
@@ -17,6 +55,12 @@ width:100%;
   text-align: center;
   margin: auto;
   background: white;
+  border-radius: 8px;
+  padding-bottom: 1px;
+}
+
+button {
+  border-radius: 5px;
   width:80%;
   border:solid;
   border-radius: 30px;
@@ -24,7 +68,7 @@ width:100%;
   box-shadow: 1px 2px 8px 2px  rgb(178, 158, 194);
   margin-top: 30px;
   padding: 10px 10px 10px 10px;
-  background-color: white;
+  background-color: white
 }
 
 #profileUsername-container {
@@ -36,6 +80,7 @@ width:100%;
 }
 
 #profileInfo-container {
+  padding-top: 10px;
   margin-top:-100px;
 }
 
