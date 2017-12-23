@@ -33,7 +33,7 @@ class App extends React.Component {
             <Route path='/username/profile' component={MainProfile} />
             <Route path="/username/project/:id" component={ProjectProfile} />
             <Route path="/usersearch" component={SearchUsersResults} />
-            <Route path="/projectsearchresults" component={SearchProjectsResults} />
+            <Route path="/username/searchresults" component={SearchProjectsResults} />
           </div>
         </MuiThemeProvider>
       </div>

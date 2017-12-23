@@ -1,0 +1,18 @@
+body {
+  background-image: url('http://www.publicdomainpictures.net/pictures/130000/velka/purple-gradient-background.jpg')
+}
+
+#allprojects {
+  font-family: Ubuntu,sans-serif;
+  margin-top: 5%;
+}
+
+#projects {
+  text-align: -webkit-center;
+}
+
+#results-title {
+  color: white;
+  text-decoration: underline;
+  margin-left: 20%;
+}

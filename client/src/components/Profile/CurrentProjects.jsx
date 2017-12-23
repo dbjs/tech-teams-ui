@@ -37,7 +37,6 @@ class CurrentProjects extends React.Component {
         <div id="brendan">{
           this.state.currentProjects.map((element, index) => (
             <div
-            id="current-project-individual"
             key={index}
             id="project"
             index={index}
@@ -45,11 +44,10 @@ class CurrentProjects extends React.Component {
             >
             <div id="main">
               <span id="image">
-                <img src={element.imageurl || "https://c1.staticflickr.com/2/1071/1106852126_b3eadf6da6.jpg"} />
+                <img id="projimg" src={element.imageurl || "https://c1.staticflickr.com/2/1071/1106852126_b3eadf6da6.jpg"} />
               </span>
               <span>
                 {element.project}
-                {element.title}
               </span>
             </div>
             <div id="desc">
