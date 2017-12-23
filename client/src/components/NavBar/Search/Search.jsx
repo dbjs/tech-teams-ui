@@ -38,7 +38,7 @@ class Search extends React.Component {
               swal.showLoading()
             }
           }).then(() => {
-            this.props.history.push('/projectsearchresults')
+            this.props.history.push('/username/searchresults')
 
           })
         })

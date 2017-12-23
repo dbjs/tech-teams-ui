@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import IndividualResult from './IndividualProjectResult';
+import './SearchProjectResulst.css';
 
 class SearchProjectsResults extends React.Component {
   constructor(props) {
@@ -24,12 +25,10 @@ class SearchProjectsResults extends React.Component {
 
   render() {
     return (
-      <div>
-        <br />
-        <h5> Results for {this.state.query} </h5>
-        ---------------------------------------------------- <br />
+      <div id="allprojects">
+        <h5 id="results-title"> Results for {this.state.query} </h5>
         {this.state.search.map((element, index) => (
-          <div key={index}>
+          <div key={index} id="projects">
             <IndividualResult
               element={element}
               position={index}

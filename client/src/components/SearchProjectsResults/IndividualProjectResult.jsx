@@ -16,13 +16,14 @@ class IndividualProjectResult extends React.Component {
   }
 
   redirectProject() {
-    // console.log('BUTTON HIT, ', this.props.updateProject);
+    console.log('BUTTON HIT, ', this.props.updateProject);
     // console.log('EVENT: ', this.props.element.name)
     this.props.updateProject(this.props.element.name);
-    this.props.history.push(`/project/${this.props.element.name}`)
+    this.props.history.push(`/username/project/${this.props.element.name}`)
   }
 
   toggleInterview() {
+    console.log(this.props)
     this.setState({ interview: !this.state.interview });
   }
 
@@ -30,8 +31,8 @@ class IndividualProjectResult extends React.Component {
     return (
       <div className="individualProject">
         <div className="searchProject-projectImg">
-          <img
-            src={this.props.element.projectImage}
+          <img id="projectImage"
+            src={this.props.element.imageurl}
             alt={this.props.element.name}
             height="100"
           />
@@ -45,6 +46,7 @@ class IndividualProjectResult extends React.Component {
           </button> <br />
           <span> {this.props.element.projectDesc} </span>
         </div>
+        <span>{this.props.element.description}</span>
       </div>
     );
   }
